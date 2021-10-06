@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="player">
+        <div class="player-overlay">
+          <h2 class="play-title">Musica para programar.!</h2>
+          <div class="action-botton">
+            <button
+              class="button"
+              id="backward"
+              aria-label="retroceder 10 segundos"
+              title="Retrocerder"
+            ></button>
+            <button
+              class="button"
+              id="play"
+              aria-label="reproducro"
+              title="play"
+            ></button>
+            <button
+              class="button"
+              id="stop"
+              aria-label="avanzar 10 segundos"
+              hidden
+              title="Detener"
+            ></button>
+
+            <button
+              class="button"
+              id="forward"
+              aria-label="avanzar"
+              title="Avanzar"
+            ></button>
+          </div>
+          <div class="player-progress">
+            <input
+              type="range"
+              id="rango"
+              min="0"
+              max="100"
+              step="1"
+              value="0"
+            />
+          </div>
+        </div>
+        <video
+          poster="./img/calle13.jpg"
+          id="video"
+          muted
+          src="./video/Calle 13 -  Me vieron Cruzar.webm"
+          width="600"
+        />
+      </div>
+    </div>
+
+    <script src="./js/js.js"></script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+.button {
+  inline-size: 32px;
+  block-size: 32px;
+  border: none;
+  background-color: transparent;
+  margin: 3px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.button:active {
+  transform: scale(0.7);
+}
+
+#backward {
+  background-image: url("../img/retroceder.svg");
+}
+
+#forward {
+  background-image: url("../img/avanzar.svg");
+}
+
+#play {
+  background-image: url("../img/play.svg");
+}
+#stop {
+  background-image: url("../img/stop.svg");
+}
+/* #pause {
+  background-image: url("../img/retroceder.jpg");
+} */
