@@ -38,30 +38,32 @@ function handleBackward() {
   console.log("hola estoy adelantando ", $video.currentTime);
 }
 
-$video.addEventListener("loadedmetadata", handleLoader);
 $video.addEventListener("timeupdate", handleTimeUpdate);
 const $progress = document.querySelector("#rango");
 
+$video.addEventListener("loadedmetadata", handleLoader);
 ///////////////////////////////////////////////////////////
 
-function handleLoader() {
-  if ($video.duration === Infinity) {
-    $video.currentTime = 1e101;
-    $video.ontimeupdate = function () {
-      this.ontimeupdate = () => {
-        return ($progress.max = $video.duration);
-      };
-      return ($progress.max = $video.duration);
-    };
-  }
+function handleLoader(e) {
+  //   if ($video.duration === Infinity) {
+  //     $video.currentTime = 1e101;
+  //     $video.ontimeupdate = function () {
+  //       this.ontimeupdate = () => {
+  //         return ($progress.max = $video.duration);
+  //       };
+  //       return ($progress.max = $video.duration);
+  //     };
   $progress.max = $video.duration;
+  //     console.log("a cargado mi video de duracion", $video.duration);
 
-  console.log("a cargado mi video de duracion", $video.duration);
+  //   }
+  console.log("holaaxxxxaaa", $video.duration);
 }
+//////////////////////////////////////////////////////////////
+
 function handleTimeUpdate() {
   $progress.value = $video.currentTime;
 }
-/////////////////////////////////////////////////////////////////////////
 $progress.addEventListener("input", handleInput);
 
 function handleInput() {
